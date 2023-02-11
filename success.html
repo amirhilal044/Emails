@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .success-message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #2e2f31;
+            font-size: 36px;
+            font-family: Arial, sans-serif;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .success-message h1 {
+            margin: 0;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            font-size: 72px;
+            margin-bottom: 30px;
+            animation: spin 2s ease-in-out;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .success-text {
+            text-align: center;
+            animation: slideIn 2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-message">
+        <i class="success-icon fas fa-check-circle"></i>
+        <h1>Success!</h1>
+        <p class="success-text">Your operation was completed successfully.</p>
+    </div>
+</body>
+
+</html>

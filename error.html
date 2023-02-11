@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .error-message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #e74c3c;
+            font-size: 36px;
+            font-family: Arial, sans-serif;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .error-message h1 {
+            margin: 0;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .error-icon {
+            font-size: 72px;
+            margin-bottom: 30px;
+            animation: shake 2s ease-in-out;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-10px);
+            }
+
+            40% {
+                transform: translateX(10px);
+            }
+
+            60% {
+                transform: translateX(-10px);
+            }
+
+            80% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .error-text {
+            text-align: center;
+            animation: slideIn 2s ease-in-out;
+            margin-bottom: 30px;
+        }
+
+        .try-again-button {
+            background-color: white;
+            color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            animation: slideIn 2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-message">
+        <i class="error-icon fas fa-times-circle"></i>
+        <h1>Error!</h1>
+        <p class="error-text">An error has occurred, please try again later.</p>
+        <form action="/error" method="post">
+            <button class="try-again-button">Try Again</button>
+        </form>
+    </div>
+</body>
+
+</html>
